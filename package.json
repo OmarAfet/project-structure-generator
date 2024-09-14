@@ -2,7 +2,7 @@
   "name": "structure-generator",
   "displayName": "Structure Generator",
   "description": "Generates the current project's directory structure.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "OmarAfet",
   "repository": {
     "type": "git",
@@ -36,7 +36,11 @@
           "items": {
             "type": "string"
           },
-          "default": [],
+          "default": [
+            ".git",
+            ".next",
+            "node_modules"
+          ],
           "description": "Files and folders to exclude from the structure."
         },
         "structureGenerator.include": {

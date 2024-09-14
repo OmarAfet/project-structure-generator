@@ -1,4 +1,4 @@
-# Structure Generator
+# [**Structure Generator**](https://marketplace.visualstudio.com/items?itemName=OmarAfet.structure-generator)
 
 A Visual Studio Code extension that generates and visualizes the directory structure of your workspace based on customizable include and exclude patterns.
 
