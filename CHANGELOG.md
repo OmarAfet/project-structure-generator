@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the [Structure Generator extension](https://marketplace.visualstudio.com/items?itemName=OmarAfet.structure-generator) will be documented in this file.
 
+## [1.0.3] - 2024-09-21
+### Fixed
+- Resolved an issue where the extension could not find the "generateStructure" command because of not compiling it before publishing.
+
 ## [1.0.2] - 2024-09-21
 ### Changed
 - Updated extension logic and documentation.
