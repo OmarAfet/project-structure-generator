@@ -1,11 +1,5 @@
 # Change Log
-All notable changes to the "structure-generator" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [1.0.0] - YYYY-MM-DD
-### Added
-- Initial release.
+All notable changes to the [Structure Generator extension](https://marketplace.visualstudio.com/items?itemName=OmarAfet.structure-generator) will be documented in this file.
 
 ## [1.0.2] - 2024-09-21
 ### Changed
