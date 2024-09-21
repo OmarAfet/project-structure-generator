@@ -39,3 +39,7 @@ You can configure **Structure Generator** using glob patterns to include or excl
   "src" // Ensure the "src" directory itself is included
 ]
 ```
+
+Example Output:
+
+![image](https://github.com/user-attachments/assets/27049859-c93f-423b-b378-b330a65625ff)
