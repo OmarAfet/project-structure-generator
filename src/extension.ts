@@ -1,13 +1,6 @@
-// Import the Node.js File System module for file operations
 import * as fs from "fs";
-
-// Import the minimatch library for pattern matching
 import { minimatch } from "minimatch";
-
-// Import the Node.js Path module for handling file paths
 import * as path from "path";
-
-// Import the VS Code extensibility API
 import * as vscode from "vscode";
 
 /**
