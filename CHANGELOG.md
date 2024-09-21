@@ -1,9 +1,23 @@
 # Change Log
 All notable changes to the [Structure Generator extension](https://marketplace.visualstudio.com/items?itemName=OmarAfet.structure-generator) will be documented in this file.
 
-## [1.0.3] - 2024-09-21
+## [1.0.4] - 2024-09-21
 ### Fixed
-- Resolved an issue where the extension could not find the "generateStructure" command because of not compiling it before publishing.
+
+## [1.0.3] - 2024-09-21
+### Added
+- Webpack support:
+  - Added `webpack`, `webpack-cli`, and `@types/webpack` as dependencies.
+  - Included a `postinstall` script to run VSCode extension installation.
+
+### Changed
+- `tsconfig.json`: 
+  - Added `webpack` types to `types` array.
+  
+- `webpack.config.js`: 
+  - Output directory changed from `dist` to `out`.
+  - Standardized quote styles and cleaned up formatting.
+  - Source map generation remains enabled (`nosources-source-map`).
 
 ## [1.0.2] - 2024-09-21
 ### Changed

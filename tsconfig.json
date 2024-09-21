@@ -1,19 +1,14 @@
 {
-	"compilerOptions": {
-		"module": "commonjs",
-		"target": "ES6",
-		"outDir": "out",
-		"lib": [
-			"es6"
-		],
-		"sourceMap": true,
-		"rootDir": "src",
-		"strict": true,
-		"esModuleInterop": true,
-		"types": ["mocha", "node"]
-	},
-	"exclude": [
-		"node_modules",
-		".vscode-test"
-	]
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES6",
+    "outDir": "out",
+    "lib": ["es6"],
+    "sourceMap": true,
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "types": ["mocha", "node", "webpack"]
+  },
+  "exclude": ["node_modules", ".vscode-test"]
 }
