@@ -2,7 +2,7 @@
   "name": "structure-generator",
   "displayName": "Structure Generator",
   "description": "Generates the current project's directory structure.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "OmarAfet",
   "repository": {
     "type": "git",
@@ -61,7 +61,9 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "webpack": "webpack --mode production",
+    "pretest": "npm run compile && npm run webpack"
   },
   "dependencies": {
     "@types/node": "^22.5.5",
@@ -72,11 +74,11 @@
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
-    "vscode": "^1.1.37",
     "@types/chai": "^4.3.19",
     "@types/mocha": "^10.0.8",
     "chai": "^5.1.1",
     "mocha": "^10.7.3",
+    "vscode": "^1.1.37",
     "vscode-test": "^1.6.1"
   }
 }

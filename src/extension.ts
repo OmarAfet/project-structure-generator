@@ -34,25 +34,50 @@ export function activate(context: vscode.ExtensionContext) {
       const excludePatterns: string[] = config.get("exclude") || [];
       const includePatterns: string[] = config.get("include") || [];
 
-      try {
-        // Generate the directory structure as a string
-        const structure = generateDirectoryStructure(
-          workspacePath,
-          excludePatterns,
-          includePatterns
-        );
+      // Use the Progress API to show a progress notification
+      vscode.window.withProgress(
+        {
+          location: vscode.ProgressLocation.Notification,
+          title: "Generating project structure...",
+          cancellable: false,
+        },
+        async (progress) => {
+          try {
+            console.log("Starting project structure generation...");
+            // Optionally, you can update progress here if you have multiple steps
+            // progress.report({ increment: 0 });
 
-        // Open a new text document with the directory structure
-        const document = await vscode.workspace.openTextDocument({
-          content: structure,
-          language: "plaintext",
-        });
+            // Generate the directory structure as a string
+            const structure = generateDirectoryStructure(
+              workspacePath,
+              excludePatterns,
+              includePatterns
+            );
 
-        // Show the document to the user
-        vscode.window.showTextDocument(document, { preview: false });
-      } catch (error) {
-        vscode.window.showErrorMessage(`Error generating structure: ${error}`);
-      }
+            // Open a new text document with the directory structure
+            const document = await vscode.workspace.openTextDocument({
+              content: structure,
+              language: "plaintext",
+            });
+
+            // Show the document to the user
+            await vscode.window.showTextDocument(document, { preview: false });
+
+            // Inform the user that the generation is done
+            vscode.window.showInformationMessage(
+              "Project structure generated successfully."
+            );
+            console.log("Project structure generation completed.");
+          } catch (error) {
+            console.error("Error generating structure:", error);
+            vscode.window.showErrorMessage(
+              `Error generating structure: ${
+                error instanceof Error ? error.message : String(error)
+              }`
+            );
+          }
+        }
+      );
     }
   );
 
